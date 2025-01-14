@@ -1,0 +1,219 @@
+
+
+#work-education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #181818;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.toggle-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333333;
+  color: #D1D1D1;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-buttons button.active {
+  background-color: #ffb74d;
+  color: #181818;
+}
+
+.toggle-buttons button:hover {
+  background-color: #ffb74d;
+  color: #181818;
+}
+
+.work-content {
+  width: 45%;
+}
+
+.education-content {
+  width: 45%;
+}
+
+.work-content.left {
+  order: -1;
+}
+
+.work-content {
+  position: relative;
+}
+
+.education-content {
+  position: relative;
+}
+
+#work-experience {
+  padding: 20px;
+  background-color: #181818;
+  border-radius: 8px;
+  color: #d1d1d1;
+}
+
+#education {
+  padding: 20px;
+  background-color: #181818;
+  border-radius: 8px;
+  color: #d1d1d1;
+}
+
+#work-experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#work-experience li {
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+  color: #D1D1D1;
+}
+
+#education li {
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #D1D1D1;
+}
+
+#work-experience h3 {
+  font-size: 20px;
+  color: #ffb74d;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#education h3 {
+  font-size: 20px;
+  color: #ffb74d;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#work-experience p {
+  font-size: 17px;
+  font-family: monospace;
+  color: #D1D1D1;
+  border-radius: 8px;             /* Rounded corners for the box */
+  padding: 10px;                  /* Padding inside the box */
+  margin-bottom: 15px; 
+  background-color: #232323;  
+}
+
+#education p {
+  font-size: 17px;
+  font-family: monospace;
+  color: #D1D1D1;
+  border-radius: 8px;             /* Rounded corners for the box */
+  padding: 10px;                  /* Padding inside the box */
+  margin-bottom: 15px; 
+  background-color: #232323;  
+}
+
+.content-wrapper::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: #D1D1D1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+}
+
+/* RWD for small screens */
+@media (max-width: 768px) {
+  #work-education {
+    padding: 20px;
+  }
+
+  .toggle-buttons {
+    flex-direction: column; /* Stack toggle buttons vertically */
+    margin-bottom: 20px;
+  }
+
+  .toggle-buttons button {
+    margin: 5px 0; /* Space out buttons vertically */
+  }
+
+  .work-content,
+  .education-content {
+    width: 100%; /* Stack work and education sections vertically */
+    margin-bottom: 20px;
+  }
+
+  .content-wrapper {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+  }
+
+  .content-wrapper::before {
+    display: none; /* Hide the vertical separator on small screens */
+  }
+}
+
+/* RWD for medium screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .toggle-buttons {
+    font-size: 14px; /* Adjust button font size for medium screens */
+  }
+
+  .work-content,
+  .education-content {
+    width: 48%; /* Ensure sections don't take too much space on medium screens */
+  }
+}
+
+/* RWD for very small screens (below 480px) */
+@media (max-width: 480px) {
+  #work-education {
+    padding: 10px;
+  }
+
+  .toggle-buttons button {
+    padding: 8px 16px; /* Adjust button size for smaller screens */
+    font-size: 14px;
+  }
+
+  .work-content,
+  .education-content {
+    width: 100%; /* Stack content vertically on very small screens */
+    margin-bottom: 15px;
+  }
+
+  #work-experience h3,
+  #education h3 {
+    font-size: 18px; /* Adjust heading font size */
+  }
+
+  #work-experience p,
+  #education p {
+    font-size: 16px; /* Adjust paragraph font size */
+  }
+}

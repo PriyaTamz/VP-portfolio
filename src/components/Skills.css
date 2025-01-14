@@ -1,0 +1,171 @@
+
+
+.skills-bg {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+/* Container for the section content */
+.skills-section {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 auto;
+}
+
+.skills-subheading {
+  margin-top: 1.4rem;
+  color: #181818;
+  font-family: monospace;
+  border: 1px solid #607D8B;
+  background-color: #607D8B;
+  padding: 5px;
+  font-weight: 700;
+}
+
+/* Styling for each skill group */
+.skills-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Skill container */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Skill logos */
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* Text under each logo */
+.skill-item p {
+  font-size: 1.1rem;
+  color: #D1D1D1;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Progress bar container */
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #2C2C2C;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0.5rem;
+  box-shadow: inset 0 1px 5px #2C2C2C;
+}
+
+/* Animated fill within progress bar */
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0; /* Start at 0 */
+  transition: width 2s ease-out; /* Smooth transition */
+}
+
+/* Media Queries for Responsive Web Design */
+
+/* Large Screen (2560px and above) */
+@media (min-width: 2560px) {
+  .skills-section {
+    max-width: 80%;
+    padding: 3rem;
+  }
+
+  .skills-heading {
+    font-size: 3rem;
+  }
+
+  .skills-subheading {
+    font-size: 1.5rem;
+  }
+
+  .skills-group {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .skill-item p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small Screen (768px to 2560px) */
+@media (max-width: 2560px) and (min-width: 768px) {
+  .skills-section {
+    max-width: 95%;
+    padding: 2rem;
+  }
+
+  .skills-heading {
+    font-size: 2.5rem;
+  }
+
+  .skills-subheading {
+    font-size: 1.2rem;
+  }
+
+  .skills-group {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .skill-item p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Screens (480px to 768px) */
+@media (max-width: 768px) and (min-width: 480px) {
+  .skills-section {
+    padding: 1.5rem;
+  }
+
+  .skills-heading {
+    font-size: 2rem;
+  }
+
+  .skills-subheading {
+    font-size: 1rem;
+  }
+
+  .skills-group {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skill-item p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 1rem;
+  }
+
+  .skills-heading {
+    font-size: 1.8rem;
+  }
+
+  .skills-subheading {
+    font-size: 1rem;
+  }
+
+  .skills-group {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item p {
+    font-size: 0.9rem;
+  }
+}

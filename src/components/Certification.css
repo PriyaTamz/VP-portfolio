@@ -1,0 +1,125 @@
+/* Section Styling */
+.certification-section {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #D1D1D1;
+  font-family: monospace;
+}
+
+/* List Styling */
+.certification-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certification-item:hover {
+  transform: scale(1.05);
+  background-color: #333333;
+}
+
+/* Text Styling */
+.certification-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #D1D1D1;
+  text-align: center;
+  margin: 0;
+}
+
+.title {
+  font-size: 1rem;
+  color: #FFB74D;
+}
+
+i {
+  background-color: #607D8B;
+  padding: 1px;
+  color: #181818;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* Title Badge Positioned on Top Left of Each Certification Item */
+.title {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: #FFB74D;
+  color: #181818;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Certification Item Container Adjusted for Badge */
+.certification-item {
+  position: relative;
+  /* Allows the .title to position absolutely */
+  background-color: #202020;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .certification-title {
+    font-size: 2rem;
+  }
+
+  .certification-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .certification-item {
+    width: 100%;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .certification-title {
+    font-size: 1.8rem;
+  }
+
+  .certification-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .certification-item {
+    width: 100%;
+  }
+}
+
+/* Large Screens (2560px and above) */
+@media (min-width: 2560px) {
+  .certification-section {
+    padding: 100px 40px;
+  }
+
+  .certification-title {
+    font-size: 3.5rem;
+  }
+
+  .certification-text {
+    font-size: 1.5rem;
+    line-height: 2;
+    max-width: 1200px;
+  }
+}

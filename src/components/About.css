@@ -1,0 +1,80 @@
+h2 {
+  font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
+  font-size: 2rem;  /* Larger font size for prominence */
+  font-weight: 500; /* Extra bold for a strong statement */
+  margin-bottom: 30px;
+  letter-spacing: 1px; /* Slight letter spacing for clarity */
+  text-transform: uppercase; /* Adds emphasis */
+  background: linear-gradient(90deg, #FF6347, #FFD700); /* Color gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Ensures the gradient shows */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Section Styling */
+section {
+  text-align: center;
+  padding: 40px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #D1D1D1;
+  font-family: monospace;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #D1D1D1;
+  max-width: 800px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* Large Screens (2560px and above) */
+@media (min-width: 2560px) {
+  section {
+    padding: 100px 40px;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2;
+    max-width: 1200px;
+  }
+}

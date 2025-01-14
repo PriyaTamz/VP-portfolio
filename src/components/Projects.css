@@ -1,0 +1,141 @@
+/* Projects Section */
+.projects-section {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Project Container - Flex Centering */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  background: linear-gradient(145deg, #242424, #181818);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px #1c1c1c;
+  width: 45%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Hover Lift Effect */
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* Project Link Button */
+.project-link {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 15px;
+  font-size: 1rem; /* Increased font size */
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFB74D;
+  background-color: #242424; /* Coral color for contrast */
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Hover Effect */
+.project-link:hover {
+  background-color: transparent;
+  color: #607D8B;
+  border-color: #607D8B;
+  box-shadow: 0 6px 8px #607D8B;
+  transform: scale(1.05);
+}
+
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .project-card {
+    width: 70%;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-name {
+    font-size: 1.6rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-link {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .project-card {
+    width: 90%;
+  }
+
+  .projects-container {
+    width: 100%;
+  }
+
+  .project-name {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-link {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Large Screens (2560px and above) */
+@media (min-width: 2560px) {
+  .projects-section {
+    padding: 100px 40px;
+  }
+
+  .project-card {
+    width: 30%;
+  }
+
+  .project-name {
+    font-size: 2.5rem;
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+  }
+
+  .project-link {
+    padding: 18px 36px;
+    font-size: 1.3rem;
+  }
+}
