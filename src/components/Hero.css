@@ -93,6 +93,39 @@ footer {
   bottom: 0;
 }
 
+/* General Icon Styling */
+i {
+  background-color: transparent !important;
+  /* Remove any background */
+  border: none !important;
+  /* Remove border if any */
+  padding: 0;
+  /* Remove padding */
+  margin-right: 8px;
+  /* Adjust spacing */
+  font-size: 1.2rem;
+  /* Icon size */
+  color: inherit;
+  /* Inherit color from parent */
+}
+
+/* Specific Colors */
+.text-danger {
+  color: #dc3545 !important;
+  /* Red */
+}
+
+.text-success {
+  color: #28a745 !important;
+  /* Green */
+}
+
+.text-primary {
+  color: #007bff !important;
+  /* Blue */
+}
+
+
 /* Responsive Design */
 
 /* Tablets (768px and below) */
@@ -117,6 +150,12 @@ footer {
   div p {
     font-size: 0.9rem;
   }
+
+  /* General Icon Styling */
+  i {
+    margin-right: 8px;
+    font-size: 1rem;
+  }
 }
 
 /* Mobile devices (480px and below) */
@@ -140,6 +179,11 @@ footer {
   }
 
   div p {
+    font-size: 0.8rem;
+  }
+
+  i {
+    margin-right: 6px;
     font-size: 0.8rem;
   }
 }
@@ -170,5 +214,10 @@ footer {
 
   div p {
     font-size: 1.5rem;
+  }
+
+  i {
+    margin-right: 10px;
+    font-size: 1.8rem;
   }
 }

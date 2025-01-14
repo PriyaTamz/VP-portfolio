@@ -21,7 +21,7 @@ const Hero = () => {
         </a>
       </div>
 
-      <a href="Vishnu Priya Resume.pdf" className='icon' download>
+      <a href="/Vishnu Priya Resume.pdf" className='icon' download>
         Get Resume
       </a>
 
