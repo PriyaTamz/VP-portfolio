@@ -44,7 +44,25 @@
 
 /* Project Link Button */
 .project-link {
-  display: inline-block;
+  display: block;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 24px;
+  margin-top: 15px;
+  font-size: 1rem; /* Increased font size */
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFB74D;
+  border: 2px solid #FFB74D;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.github-link {
+  display: block;
+  flex-direction: column;
+  gap: 10px;
   padding: 12px 24px;
   margin-top: 15px;
   font-size: 1rem; /* Increased font size */
@@ -58,12 +76,72 @@
 }
 
 /* Hover Effect */
-.project-link:hover {
-  background-color: transparent;
+.project-link:hover, .github-link:hover {
   color: #607D8B;
-  border-color: #607D8B;
-  box-shadow: 0 6px 8px #607D8B;
   transform: scale(1.05);
+  border: 2px solid #607D8B;
+  
+}
+
+/* Center the entire carousel */
+.carousel {
+  max-width: 500px; /* Adjust based on design preference */
+  margin: auto;
+  overflow: hidden; /* Prevents overflow */
+}
+
+/* Ensure the carousel inner aligns properly */
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Center each carousel-item */
+.carousel-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Fix card width inside carousel */
+.carousel-item .project-card {
+  width: 80%;
+  max-width: 500px; /* Adjust based on your design */
+  margin: auto;
+}
+
+/* Ensure only the active item is displayed */
+.carousel-item:not(.active) {
+  display: none !important;
+}
+
+/* Ensure navigation buttons don’t cover content */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 10; /* Keeps them clickable */
+}
+
+
+.project-card {
+  width: 60%;
+}
+
+.project-name {
+  font-size: 1.5rem;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #607D8B;
+  
+}
+
+.project-link {
+  padding: 14px 28px;
+  font-size: 1rem;
 }
 
 
@@ -79,7 +157,7 @@
   }
 
   .project-name {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   .project-description {
@@ -89,7 +167,7 @@
   .project-link {
     padding: 10px 20px;
     font-size: 0.95rem;
-  }
+  }  
 }
 
 /* Mobile devices (480px and below) */
@@ -103,7 +181,7 @@
   }
 
   .project-name {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .project-description {
@@ -113,6 +191,28 @@
   .project-link {
     padding: 8px 18px;
     font-size: 0.85rem;
+  }
+
+  
+}
+
+/* Medium Screens (1024px and below) */
+@media (max-width: 1024px) {
+  .project-card {
+    width: 60%;
+  }
+
+  .project-name {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1.1rem;
+  }
+
+  .project-link {
+    padding: 14px 28px;
+    font-size: 1rem;
   }
 }
 
@@ -127,7 +227,7 @@
   }
 
   .project-name {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .project-description {
