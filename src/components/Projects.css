@@ -1,241 +1,275 @@
-/* Projects Section */
 .projects-section {
-  text-align: center;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  padding: 40px;
 }
 
-/* Project Container - Flex Centering */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+.projects-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-/* Project Card */
 .project-card {
-  background: linear-gradient(145deg, #242424, #181818);
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px #1c1c1c;
-  width: 45%;
-  max-width: 400px;
-  text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  background-color: #262626;
+  border: 1px solid #181818;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  color: #607D8B;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* Hover Lift Effect */
-.project-card:hover {
-  transform: translateY(-10px) scale(1.03);
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
-/* Project Link Button */
-.project-link {
-  display: block;
-  flex-direction: column;
-  gap: 10px;
-  padding: 12px 24px;
-  margin-top: 15px;
-  font-size: 1rem; /* Increased font size */
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #FFB74D;
-  border: 2px solid #FFB74D;
-  border-radius: 30px;
-  transition: all 0.4s ease;
-  font-family:'Courier New', Courier, monospace;
+.card-techStack {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  color: #ffb74d;
 }
 
-.github-link {
-  display: block;
-  flex-direction: column;
-  gap: 10px;
-  padding: 12px 24px;
-  margin-top: 15px;
-  font-size: 1rem; /* Increased font size */
-  text-transform: uppercase;
+/* Modern Button Style */
+.project-link, .github-link {
+  font-size: 1rem;
+  color: #ffb74d;
+  border: 2px solid #ffb74d;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   text-decoration: none;
-  color: #FFB74D;
-  border: 2px solid #FFB74D;
-  border-radius: 30px;
-  transition: all 0.4s ease;
-  font-family:'Courier New', Courier, monospace;
+  display: inline-block;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
 /* Hover Effect */
 .project-link:hover, .github-link:hover {
+  border-color: #607D8B;
   color: #607D8B;
-  transform: scale(1.05);
-  border: 2px solid #607D8B;
-  
-}
-
-/* Center the entire carousel */
-.carousel {
-  max-width: 500px; /* Adjust based on design preference */
-  margin: auto;
-  overflow: hidden; /* Prevents overflow */
-}
-
-/* Ensure the carousel inner aligns properly */
-.carousel-inner {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-/* Center each carousel-item */
-.carousel-item {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-/* Fix card width inside carousel */
-.carousel-item .project-card {
-  width: 80%;
-  max-width: 500px; /* Adjust based on your design */
-  margin: auto;
-}
-
-/* Ensure only the active item is displayed */
-.carousel-item:not(.active) {
-  display: none !important;
-}
-
-/* Ensure navigation buttons don’t cover content */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-  z-index: 10; /* Keeps them clickable */
-}
-
-
-.project-card {
-  width: 60%;
-}
-
-.project-name {
-  font-size: 1.5rem;
-}
-
-.project-description {
-  font-size: 1.1rem;
-  color: #607D8B;
-  
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-link {
-  padding: 14px 28px;
-  font-size: 1rem;
+  margin-right: 10px;
 }
 
-
-/* Tablets (768px and below) */
-@media (max-width: 768px) {
-  .project-card {
-    width: 70%;
-  }
-
-  .projects-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .project-name {
-    font-size: 1.3rem;
-  }
-
-  .project-description {
-    font-size: 1rem;
-  }
-
-  .project-link {
-    padding: 10px 20px;
-    font-size: 0.95rem;
-  }  
+.github-link {
+  margin-left: 10px;
 }
 
-/* Mobile devices (480px and below) */
-@media (max-width: 480px) {
-  .project-card {
-    width: 90%;
+/* Media Queries */
+
+/* For screens with a minimum width of 2560px */
+@media (min-width: 2560px) {
+  .projects-section {
+    padding: 60px;
   }
 
-  .projects-container {
-    width: 100%;
+  .projects-title {
+    font-size: 2.5rem;
   }
 
-  .project-name {
-    font-size: 1.2rem;
-  }
-
-  .project-description {
-    font-size: 0.9rem;
-  }
-
-  .project-link {
-    padding: 8px 18px;
-    font-size: 0.85rem;
-  }
-
-  
-}
-
-/* Medium Screens (1024px and below) */
-@media (max-width: 1024px) {
-  .project-card {
-    width: 60%;
-  }
-
-  .project-name {
+  .card-title {
     font-size: 1.5rem;
   }
 
-  .project-description {
+  .card-text {
     font-size: 1.1rem;
-  }
-
-  .project-link {
-    padding: 14px 28px;
-    font-size: 1rem;
   }
 }
 
-/* Large Screens (2560px and above) */
-@media (min-width: 2560px) {
+/* For screens between 768px and 2560px */
+@media (max-width: 2560px) and (min-width: 768px) {
   .projects-section {
-    padding: 100px 40px;
+    padding: 50px;
   }
 
+  .projects-title {
+    font-size: 2.2rem;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 1.05rem;
+  }
+
+  .project-link, .github-link {
+    font-size: 0.95rem;
+    padding: 10px 15px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  /* Adjust card width for 768px */
   .project-card {
-    width: 30%;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* For screens between 480px and 768px */
+@media (max-width: 768px) and (min-width: 480px) {
+  .projects-section {
+    padding: 30px;
   }
 
-  .project-name {
+  .projects-title {
     font-size: 1.8rem;
   }
 
-  .project-description {
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 1.05rem;
+  }
+
+  .project-link, .github-link {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    display: block; /* Ensures the buttons are stacked vertically */
+    width: 100%; /* Make the buttons fill the card width */
+    margin: 5px 0; /* Adds space between buttons */
+    text-align: center; /* Centers text inside the button */
+    border-radius: 10px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  /* Adjust card width for 480px */
+  .project-card {
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 20px; /* Ensure space for the buttons inside the card */
+  }
+
+  /* Flexbox to stack buttons vertically */
+  .card-body .d-flex {
+    flex-direction: column; /* Stack buttons in column */
+    align-items: center; /* Centers buttons horizontally */
+    justify-content: center;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 20px;
+  }
+
+  .projects-title {
     font-size: 1.5rem;
   }
 
-  .project-link {
-    padding: 18px 36px;
-    font-size: 1.3rem;
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  .project-link, .github-link {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  /* Adjust card width for smaller screens */
+  .project-card {
+    width: 100%;
+    margin: 0 auto;
   }
 }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .projects-section {
+    padding: 35px;
+  }
+
+  .projects-title {
+    font-size: 1.9rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .project-link, .github-link {
+    font-size: 1rem;
+    padding: 12px 18px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .card-body {
+    padding: 18px;
+  }
+
+  .project-card {
+    width: 100%; /* Ensure the card takes up full width */
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  /* Adjust the row container for stacking cards vertically */
+  .row {
+    display: flex;
+    flex-direction: column; /* Stack cards in a single column */
+    gap: 20px; /* Add space between each card */
+  }
+
+  .col-md-4 {
+    width: 100%; /* Each card takes up full width */
+  }
+
+  /* Maintain button row order and ensure alignment inside card */
+  .card-body .d-flex {
+    flex-direction: row; /* Keep the row order */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Add spacing between buttons */
+  }
+
+  .project-link, .github-link {
+    flex-grow: 1; /* Allow buttons to grow and fill the space evenly */
+    text-align: center;
+  }
+}
+
